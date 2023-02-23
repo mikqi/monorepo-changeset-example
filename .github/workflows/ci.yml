@@ -56,8 +56,8 @@ jobs:
       - name: Build
         if: ${{ steps.filter.outputs.files == 'true' }}
         run: yarn build
-  
-    test:
+
+  test:
     needs: install
     runs-on: ubuntu-latest
 
