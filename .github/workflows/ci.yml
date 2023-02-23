@@ -47,6 +47,7 @@ jobs:
             files:
               - 'packages/**/*.{ts,tsx,js,jsx,json}'
       - uses: actions/cache@v3
+        if: ${{ steps.filter.outputs.files == 'true' }}
         with:
           path: |
             **/node_modules
@@ -78,6 +79,7 @@ jobs:
               - 'packages/**/*.{ts,tsx,js,jsx,json}'
 
       - uses: actions/cache@v3
+        if: ${{ steps.filter.outputs.files == 'true' }}
         with:
           path: |
             **/node_modules
