@@ -3,6 +3,6 @@
 module.exports = text;
 
 function text() {
-    console.log('button')
+    console.log('button updated')
 }
 
