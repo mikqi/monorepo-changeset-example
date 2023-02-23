@@ -11,6 +11,7 @@
   },
   "scripts": {
     "prestart": "yarn && yarn bootstrap",
+    "prestart:ci": "yarn install --frozen-lockfile && yarn bootstrap",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna run build",
     "test": "lerna run test",
