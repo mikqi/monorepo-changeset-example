@@ -38,12 +38,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: dorny/paths-filter@v2.11.1
-        id: filter
-        with:
-          filters: |
-            files:
-              - 'packages/**/*.{ts,tsx,js,jsx,json}'
+
       - uses: actions/cache@v3
         if: ${{ steps.filter.outputs.files == 'true' }}
         with:
