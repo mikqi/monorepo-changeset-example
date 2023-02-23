@@ -17,7 +17,7 @@
     "test": "lerna run test",
     "clean:packages": "yarn workspaces run clean",
     "changeset": "changeset",
-    "release": "changeset publish",
+    "release": "yarn build && changeset publish",
     "version": "changeset version && node ./scripts/bump-peer-dep-ranges.js"
   },
   "dependencies": {
