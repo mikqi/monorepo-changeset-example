@@ -1,0 +1,16 @@
+node_modules
+yarn-error.log
+
+# dotenv environment variables file
+.env
+
+# next.js build output
+.next
+
+# production build
+out
+dist
+
+# serverless directories
+.serverless
+lambda
