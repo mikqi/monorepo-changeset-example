@@ -40,18 +40,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: actions/cache@v3
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-
       - uses: dorny/paths-filter@v2.11.1
         id: filter
         with:
           filters: |
             files:
               - 'packages/**/*.{ts,tsx,js,jsx,json}'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Build
         if: ${{ steps.filter.outputs.files == 'true' }}
@@ -70,11 +69,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: actions/cache@v3
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - uses: dorny/paths-filter@v2.11.1
         id: filter
@@ -82,6 +76,12 @@ jobs:
           filters: |
             files:
               - 'packages/**/*.{ts,tsx,js,jsx,json}'
+
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Test
         if: ${{ steps.filter.outputs.files == 'true' }}
