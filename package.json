@@ -1,12 +1,10 @@
 {
   "name": "kisanak",
+  "private": true,
   "workspaces": {
     "packages": [
       "packages/*"
     ]
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "scripts": {
     "prestart": "yarn && yarn bootstrap",
