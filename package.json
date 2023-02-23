@@ -10,6 +10,10 @@
     "access": "public"
   },
   "scripts": {
+    "prestart": "yarn && yarn bootstrap",
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "build": "lerna run build",
+    "test": "lerna run test",
     "clean:packages": "yarn workspaces run clean",
     "changeset": "changeset",
     "release": "changeset publish",

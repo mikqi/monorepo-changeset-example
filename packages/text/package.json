@@ -15,7 +15,8 @@
       "lib"
     ],
     "scripts": {
-      "test": "echo \"Error: run tests from root\""
+      "test": "echo \"Log: run tests from root\"",
+      "build": "echo \"Log: run build from root\""
     },
     "bugs": {
       "url": "https://github.com/mikqi/monorepo-actions/issues"
