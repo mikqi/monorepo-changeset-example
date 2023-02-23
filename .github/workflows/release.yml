@@ -40,7 +40,6 @@ jobs:
           node-version: 16
 
       - uses: actions/cache@v3
-        if: ${{ steps.filter.outputs.files == 'true' }}
         with:
           path: |
             **/node_modules
