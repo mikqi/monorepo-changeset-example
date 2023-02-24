@@ -15,7 +15,7 @@
     "clean:packages": "yarn workspaces run clean",
     "changeset": "changeset",
     "release": "yarn build && changeset publish",
-    "version": "changeset version && node ./scripts/bump-peer-dep-ranges.js"
+    "version": "changeset version"
   },
   "dependencies": {
     "@changesets/cli": "^2.26.0",
