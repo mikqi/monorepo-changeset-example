@@ -1,5 +1,11 @@
 # @kisanak/button
 
+## 0.2.3
+
+### Patch Changes
+
+- [#3](https://github.com/mikqi/monorepo-actions/pull/3) [`62066f6`](https://github.com/mikqi/monorepo-actions/commit/62066f6d243e1abb4dd2bf3c25928b30ecb932fe) Thanks [@mikqi](https://github.com/mikqi)! - update copywrite for button component
+
 ## 0.2.2
 
 ### Patch Changes
