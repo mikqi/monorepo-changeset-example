@@ -1,8 +1,12 @@
 name: Release
 
+# run release when .changeset or CHANGELOG.md in packages folder is changed
 on:
   push:
     branches: [main]
+    paths:
+      - .changeset/**
+      - packages/**/CHANGELOG.md
 
 jobs:
   release:
