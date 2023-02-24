@@ -8,6 +8,7 @@ inputs:
     default: |
       files:
         - 'packages/**/*.{ts,tsx,js,jsx,json}'
+        - 'yarn.lock'
 
 runs:
   using: "composite"
