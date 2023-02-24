@@ -10,6 +10,11 @@ inputs:
         - 'packages/**/*.{ts,tsx,js,jsx,json}'
         - 'yarn.lock'
 
+outputs:
+  files:
+    description: "Whether files were changed"
+    value: ${{ steps.filter.outputs.files }}
+
 runs:
   using: "composite"
   steps:
