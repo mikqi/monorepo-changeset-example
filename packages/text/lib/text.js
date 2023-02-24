@@ -3,6 +3,6 @@
 module.exports = text;
 
 function text() {
-    console.log('Text updated')
+    console.log('Text updated again')
 }
 
