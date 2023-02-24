@@ -1,0 +1,18 @@
+name: "CI Filter"
+description: "Filter CI jobs based on changed files"
+
+inputs:
+  filters:
+    description: "The filters to use"
+    required: false
+    default: |
+      files:
+        - 'packages/**/*.{ts,tsx,js,jsx,json}'
+
+runs:
+  using: "composite"
+  steps:
+    - uses: dorny/paths-filter@v2.11.1
+      id: filter
+      with:
+        filters: ${{ inputs.filters }}
