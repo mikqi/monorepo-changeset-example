@@ -26,6 +26,11 @@ jobs:
         run: yarn prestart:ci
 
   release:
+    permissions:
+      contents: write #  to create release (changesets/action)
+      issues: write # to post issue comments (changesets/action)
+      pull-requests: write #  to create pull request (changesets/action)
+
     needs: install
     runs-on: ubuntu-latest
 
@@ -50,6 +55,7 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: yarn run release
+          version: yarn run version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
